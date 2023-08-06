@@ -1,1 +1,3 @@
-console.log("testing in webpack");
+const temp='testing'
+
+console.log(temp)

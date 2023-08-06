@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "esnext",
     "module": "esnext",
-    "sourceMap": true,
-    "outDir": "dist",
+    "lib": ["es2020", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "strict": true,
+    "noEmit": true
   },
-  "include": ["packages/**/*"],
+  "include": ["./packages/**/*", ".eslintrc.js", "babel.config.js"],
   "exclude": ["node_modules", "dist"]
 }
