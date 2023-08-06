@@ -12,20 +12,14 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/i,
+        test: /\.(ts|tsx|js|jsx)$/i,
         use: "babel-loader",
-        options: {
-          presets: [
-            "@babel/preset-env",
-            "@babel/preset-react",
-            "@babel/preset-typescript",
-          ],
-        },
       },
     ],
   },
   resolve: {
     extensions: [".ts", ".js", ".tsx", ".d.ts"],
+    modules: [path.resolve(__dirname, "node_modules"), path.resolve(__dirname, "./packages")],
   },
   plugins: [],
 };
