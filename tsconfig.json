@@ -14,6 +14,6 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["./packages/**/*", ".eslintrc.js", "babel.config.js"],
+  "include": ["./packages/**/*", "./*.{ts,js,cjs,json}", "./.*.{ts,js,cjs,json}", "babel.config.js"],
   "exclude": ["node_modules", "dist"]
 }
