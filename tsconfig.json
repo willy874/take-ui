@@ -4,7 +4,6 @@
     "target": "esnext",
     "module": "esnext",
     "lib": ["es2020", "dom"],
-    "jsx": "react",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
@@ -12,7 +11,10 @@
     "allowJs": true,
     "noImplicitAny": true,
     "strict": true,
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@/components/*": "./packages/builder/frameworks/components/*"
+    }
   },
   "include": ["./packages/**/*", "webpack.config.js", ".eslintrc.cjs"],
   "exclude": ["node_modules", "dist"]
