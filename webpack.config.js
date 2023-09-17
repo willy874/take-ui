@@ -1,6 +1,7 @@
 import path from "path";
 import "webpack-dev-server";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { webpack } from "webpack";
 
 const config = {
   mode: "development",
@@ -13,7 +14,7 @@ const config = {
     rules: [
       {
         test: /\.(ts|tsx|js|jsx)$/i,
-        use: "babel-loader",
+        exclude: /node_modules/,
       },
     ],
   },
@@ -27,6 +28,10 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./dist/index.html",
+    }),
+    new webpack.ProvidePlugin({
+      React: "react",
+      Component: ["react", "Component"],
     }),
   ],
 };
