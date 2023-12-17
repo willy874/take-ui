@@ -1,3 +1,3 @@
-const temp='eslint test'
+const temp = "eslint test";
 
-console.log(temp)
+console.log(temp);

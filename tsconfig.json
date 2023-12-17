@@ -13,7 +13,7 @@
     "strict": true,
     "noEmit": true,
     "paths": {
-      "@/components/*": "./packages/builder/frameworks/components/*"
+      "@/components/*": ["./packages/builder/frameworks/components/*"]
     }
   },
   "include": ["./packages/**/*", "webpack.config.js", ".eslintrc.cjs"],
